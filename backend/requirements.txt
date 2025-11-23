@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pydantic
+requests
+alpaca-trade-api
+google-generativeai
+python-dotenv
+ollama
+yfinance
