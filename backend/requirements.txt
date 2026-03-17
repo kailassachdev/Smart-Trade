@@ -1,9 +1,35 @@
 fastapi
-uvicorn
+uvicorn[standard]
 pydantic
+pydantic[email]
 requests
-alpaca-trade-api
+
+# Database
+sqlalchemy
+psycopg2-binary          # PostgreSQL driver (falls back to sqlite if not configured)
+alembic                   # Database migrations
+
+# Auth
+python-multipart
+passlib[bcrypt]
+bcrypt==4.0.1
+pyjwt
+
+# Market Data & Analysis
+yfinance
+pandas-ta                 # Technical indicators (RSI, MACD, SMA)
+pytz                      # Timezone-aware market hours detection
+
+# AI / LLM
+ollama
 google-generativeai
 python-dotenv
-ollama
-yfinance
+alpaca-trade-api
+
+# Scheduling & Task Queue
+APScheduler               # Replaces raw threading.Thread for agent scheduling
+celery[redis]             # Celery task queue (requires Redis)
+redis                     # Redis client for Celery broker
+
+# Logging
+structlog                 # Structured JSON logging
